@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="KevinDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="KevinTB">
+          <Key>
+            <PropertyRef Name="learnerID" />
+          </Key>
+          <Property Name="learnerID" Type="int" Nullable="false" />
+          <Property Name="learnerName" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="strongestSkill" Type="nchar" MaxLength="20" />
+          <Property Name="numberOfLanguages" Type="int" />
+          <Property Name="favoriteSubject" Type="nchar" MaxLength="20" />
+          <Property Name="enrolledProgram" Type="nchar" MaxLength="30" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="KevinDBModelStoreContainer">
+          <EntitySet Name="KevinTB" EntityType="Self.KevinTB" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KevinDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="KevinTB">
+          <Key>
+            <PropertyRef Name="learnerID" />
+          </Key>
+          <Property Name="learnerID" Type="Int32" Nullable="false" />
+          <Property Name="learnerName" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="strongestSkill" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="numberOfLanguages" Type="Int32" />
+          <Property Name="favoriteSubject" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <Property Name="enrolledProgram" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="KevinDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="KevinTBs" EntityType="Self.KevinTB" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KevinDBModelStoreContainer" CdmEntityContainer="KevinDBEntities">
+          <EntitySetMapping Name="KevinTBs">
+            <EntityTypeMapping TypeName="KevinDBModel.KevinTB">
+              <MappingFragment StoreEntitySet="KevinTB">
+                <ScalarProperty Name="learnerID" ColumnName="learnerID" />
+                <ScalarProperty Name="learnerName" ColumnName="learnerName" />
+                <ScalarProperty Name="strongestSkill" ColumnName="strongestSkill" />
+                <ScalarProperty Name="numberOfLanguages" ColumnName="numberOfLanguages" />
+                <ScalarProperty Name="favoriteSubject" ColumnName="favoriteSubject" />
+                <ScalarProperty Name="enrolledProgram" ColumnName="enrolledProgram" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
