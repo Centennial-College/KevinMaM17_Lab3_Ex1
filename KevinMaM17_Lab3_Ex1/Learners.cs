@@ -72,12 +72,12 @@ namespace KevinMaM17_Lab3_Ex1
                 MessageBox.Show("Learner ID, Learner Name and Enrolled Programs must contain values", "Entity Validation Exception");
             }
 
-            this._refreshContacts();
+            this._refreshContacts(); //change back to unfiltered data
         }
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            // use LINQ to filter learners with enrolled program as specified
+            // use LINQ to filter learners with enrolled program a c s specified
             var searchLearnerQuery =
                from learner in dbContext.KevinTBs
                where learner.enrolledProgram.Equals(searchTextBox.Text)

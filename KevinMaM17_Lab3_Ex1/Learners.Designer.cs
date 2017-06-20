@@ -29,25 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Learners));
             System.Windows.Forms.Label enrolledProgramLabel;
             System.Windows.Forms.Label favoriteSubjectLabel;
             System.Windows.Forms.Label learnerIDLabel;
             System.Windows.Forms.Label learnerNameLabel;
             System.Windows.Forms.Label numberOfLanguagesLabel;
             System.Windows.Forms.Label strongestSkillLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Learners));
             this.kevinTBBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.kevinTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.kevinTBBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.enrolledProgramTextBox = new System.Windows.Forms.TextBox();
             this.favoriteSubjectTextBox = new System.Windows.Forms.TextBox();
@@ -56,11 +57,10 @@
             this.numberOfLanguagesTextBox = new System.Windows.Forms.TextBox();
             this.strongestSkillTextBox = new System.Windows.Forms.TextBox();
             this.searchGroupBox = new System.Windows.Forms.GroupBox();
-            this.searchLabel = new System.Windows.Forms.Label();
-            this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
+            this.searchTextBox = new System.Windows.Forms.TextBox();
+            this.searchLabel = new System.Windows.Forms.Label();
             this.browseAllEntriesButton = new System.Windows.Forms.Button();
-            this.kevinTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             enrolledProgramLabel = new System.Windows.Forms.Label();
             favoriteSubjectLabel = new System.Windows.Forms.Label();
             learnerIDLabel = new System.Windows.Forms.Label();
@@ -69,9 +69,63 @@
             strongestSkillLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.kevinTBBindingNavigator)).BeginInit();
             this.kevinTBBindingNavigator.SuspendLayout();
-            this.searchGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kevinTBBindingSource)).BeginInit();
+            this.searchGroupBox.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // enrolledProgramLabel
+            // 
+            enrolledProgramLabel.AutoSize = true;
+            enrolledProgramLabel.Location = new System.Drawing.Point(12, 90);
+            enrolledProgramLabel.Name = "enrolledProgramLabel";
+            enrolledProgramLabel.Size = new System.Drawing.Size(90, 13);
+            enrolledProgramLabel.TabIndex = 1;
+            enrolledProgramLabel.Text = "Enrolled Program:";
+            // 
+            // favoriteSubjectLabel
+            // 
+            favoriteSubjectLabel.AutoSize = true;
+            favoriteSubjectLabel.Location = new System.Drawing.Point(12, 117);
+            favoriteSubjectLabel.Name = "favoriteSubjectLabel";
+            favoriteSubjectLabel.Size = new System.Drawing.Size(87, 13);
+            favoriteSubjectLabel.TabIndex = 3;
+            favoriteSubjectLabel.Text = "Favorite Subject:";
+            // 
+            // learnerIDLabel
+            // 
+            learnerIDLabel.AutoSize = true;
+            learnerIDLabel.Location = new System.Drawing.Point(12, 36);
+            learnerIDLabel.Name = "learnerIDLabel";
+            learnerIDLabel.Size = new System.Drawing.Size(60, 13);
+            learnerIDLabel.TabIndex = 5;
+            learnerIDLabel.Text = "Learner ID:";
+            // 
+            // learnerNameLabel
+            // 
+            learnerNameLabel.AutoSize = true;
+            learnerNameLabel.Location = new System.Drawing.Point(12, 63);
+            learnerNameLabel.Name = "learnerNameLabel";
+            learnerNameLabel.Size = new System.Drawing.Size(77, 13);
+            learnerNameLabel.TabIndex = 7;
+            learnerNameLabel.Text = "Learner Name:";
+            // 
+            // numberOfLanguagesLabel
+            // 
+            numberOfLanguagesLabel.AutoSize = true;
+            numberOfLanguagesLabel.Location = new System.Drawing.Point(12, 144);
+            numberOfLanguagesLabel.Name = "numberOfLanguagesLabel";
+            numberOfLanguagesLabel.Size = new System.Drawing.Size(117, 13);
+            numberOfLanguagesLabel.TabIndex = 9;
+            numberOfLanguagesLabel.Text = "Number Of Languages:";
+            // 
+            // strongestSkillLabel
+            // 
+            strongestSkillLabel.AutoSize = true;
+            strongestSkillLabel.Location = new System.Drawing.Point(12, 171);
+            strongestSkillLabel.Name = "strongestSkillLabel";
+            strongestSkillLabel.Size = new System.Drawing.Size(77, 13);
+            strongestSkillLabel.TabIndex = 11;
+            strongestSkillLabel.Text = "Strongest Skill:";
             // 
             // kevinTBBindingNavigator
             // 
@@ -102,6 +156,35 @@
             this.kevinTBBindingNavigator.Size = new System.Drawing.Size(317, 25);
             this.kevinTBBindingNavigator.TabIndex = 0;
             this.kevinTBBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // kevinTBBindingSource
+            // 
+            this.kevinTBBindingSource.DataSource = typeof(KevinDBModel.KevinTB);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -135,16 +218,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -167,26 +243,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // kevinTBBindingNavigatorSaveItem
             // 
@@ -198,15 +256,6 @@
             this.kevinTBBindingNavigatorSaveItem.Text = "Save Data";
             this.kevinTBBindingNavigatorSaveItem.Click += new System.EventHandler(this.kevinTBBindingNavigatorSaveItem_Click);
             // 
-            // enrolledProgramLabel
-            // 
-            enrolledProgramLabel.AutoSize = true;
-            enrolledProgramLabel.Location = new System.Drawing.Point(12, 90);
-            enrolledProgramLabel.Name = "enrolledProgramLabel";
-            enrolledProgramLabel.Size = new System.Drawing.Size(90, 13);
-            enrolledProgramLabel.TabIndex = 1;
-            enrolledProgramLabel.Text = "Enrolled Program:";
-            // 
             // enrolledProgramTextBox
             // 
             this.enrolledProgramTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kevinTBBindingSource, "enrolledProgram", true));
@@ -214,15 +263,6 @@
             this.enrolledProgramTextBox.Name = "enrolledProgramTextBox";
             this.enrolledProgramTextBox.Size = new System.Drawing.Size(172, 20);
             this.enrolledProgramTextBox.TabIndex = 3;
-            // 
-            // favoriteSubjectLabel
-            // 
-            favoriteSubjectLabel.AutoSize = true;
-            favoriteSubjectLabel.Location = new System.Drawing.Point(12, 117);
-            favoriteSubjectLabel.Name = "favoriteSubjectLabel";
-            favoriteSubjectLabel.Size = new System.Drawing.Size(87, 13);
-            favoriteSubjectLabel.TabIndex = 3;
-            favoriteSubjectLabel.Text = "Favorite Subject:";
             // 
             // favoriteSubjectTextBox
             // 
@@ -232,15 +272,6 @@
             this.favoriteSubjectTextBox.Size = new System.Drawing.Size(172, 20);
             this.favoriteSubjectTextBox.TabIndex = 4;
             // 
-            // learnerIDLabel
-            // 
-            learnerIDLabel.AutoSize = true;
-            learnerIDLabel.Location = new System.Drawing.Point(12, 36);
-            learnerIDLabel.Name = "learnerIDLabel";
-            learnerIDLabel.Size = new System.Drawing.Size(60, 13);
-            learnerIDLabel.TabIndex = 5;
-            learnerIDLabel.Text = "Learner ID:";
-            // 
             // learnerIDTextBox
             // 
             this.learnerIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kevinTBBindingSource, "learnerID", true));
@@ -248,15 +279,6 @@
             this.learnerIDTextBox.Name = "learnerIDTextBox";
             this.learnerIDTextBox.Size = new System.Drawing.Size(172, 20);
             this.learnerIDTextBox.TabIndex = 1;
-            // 
-            // learnerNameLabel
-            // 
-            learnerNameLabel.AutoSize = true;
-            learnerNameLabel.Location = new System.Drawing.Point(12, 63);
-            learnerNameLabel.Name = "learnerNameLabel";
-            learnerNameLabel.Size = new System.Drawing.Size(77, 13);
-            learnerNameLabel.TabIndex = 7;
-            learnerNameLabel.Text = "Learner Name:";
             // 
             // learnerNameTextBox
             // 
@@ -266,15 +288,6 @@
             this.learnerNameTextBox.Size = new System.Drawing.Size(172, 20);
             this.learnerNameTextBox.TabIndex = 2;
             // 
-            // numberOfLanguagesLabel
-            // 
-            numberOfLanguagesLabel.AutoSize = true;
-            numberOfLanguagesLabel.Location = new System.Drawing.Point(12, 144);
-            numberOfLanguagesLabel.Name = "numberOfLanguagesLabel";
-            numberOfLanguagesLabel.Size = new System.Drawing.Size(117, 13);
-            numberOfLanguagesLabel.TabIndex = 9;
-            numberOfLanguagesLabel.Text = "Number Of Languages:";
-            // 
             // numberOfLanguagesTextBox
             // 
             this.numberOfLanguagesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kevinTBBindingSource, "numberOfLanguages", true));
@@ -282,15 +295,6 @@
             this.numberOfLanguagesTextBox.Name = "numberOfLanguagesTextBox";
             this.numberOfLanguagesTextBox.Size = new System.Drawing.Size(172, 20);
             this.numberOfLanguagesTextBox.TabIndex = 5;
-            // 
-            // strongestSkillLabel
-            // 
-            strongestSkillLabel.AutoSize = true;
-            strongestSkillLabel.Location = new System.Drawing.Point(12, 171);
-            strongestSkillLabel.Name = "strongestSkillLabel";
-            strongestSkillLabel.Size = new System.Drawing.Size(77, 13);
-            strongestSkillLabel.TabIndex = 11;
-            strongestSkillLabel.Text = "Strongest Skill:";
             // 
             // strongestSkillTextBox
             // 
@@ -310,23 +314,7 @@
             this.searchGroupBox.Size = new System.Drawing.Size(290, 52);
             this.searchGroupBox.TabIndex = 13;
             this.searchGroupBox.TabStop = false;
-            this.searchGroupBox.Text = "Find an entry by learner id";
-            // 
-            // searchLabel
-            // 
-            this.searchLabel.AutoSize = true;
-            this.searchLabel.Location = new System.Drawing.Point(6, 22);
-            this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(90, 13);
-            this.searchLabel.TabIndex = 14;
-            this.searchLabel.Text = "Enrolled Program:";
-            // 
-            // searchTextBox
-            // 
-            this.searchTextBox.Location = new System.Drawing.Point(102, 18);
-            this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(122, 20);
-            this.searchTextBox.TabIndex = 7;
+            this.searchGroupBox.Text = "Find leaners by enrolled program";
             // 
             // searchButton
             // 
@@ -338,6 +326,22 @@
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
+            // searchTextBox
+            // 
+            this.searchTextBox.Location = new System.Drawing.Point(102, 18);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Size = new System.Drawing.Size(122, 20);
+            this.searchTextBox.TabIndex = 7;
+            // 
+            // searchLabel
+            // 
+            this.searchLabel.AutoSize = true;
+            this.searchLabel.Location = new System.Drawing.Point(6, 22);
+            this.searchLabel.Name = "searchLabel";
+            this.searchLabel.Size = new System.Drawing.Size(90, 13);
+            this.searchLabel.TabIndex = 14;
+            this.searchLabel.Text = "Enrolled Program:";
+            // 
             // browseAllEntriesButton
             // 
             this.browseAllEntriesButton.Location = new System.Drawing.Point(12, 259);
@@ -347,10 +351,6 @@
             this.browseAllEntriesButton.Text = "Browse All Entries";
             this.browseAllEntriesButton.UseVisualStyleBackColor = true;
             this.browseAllEntriesButton.Click += new System.EventHandler(this.browseAllEntriesButton_Click);
-            // 
-            // kevinTBBindingSource
-            // 
-            this.kevinTBBindingSource.DataSource = typeof(KevinDBModel.KevinTB);
             // 
             // Learners
             // 
@@ -379,9 +379,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.kevinTBBindingNavigator)).EndInit();
             this.kevinTBBindingNavigator.ResumeLayout(false);
             this.kevinTBBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kevinTBBindingSource)).EndInit();
             this.searchGroupBox.ResumeLayout(false);
             this.searchGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kevinTBBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
