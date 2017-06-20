@@ -53,7 +53,8 @@ namespace KevinMaM17_Lab3_Ex1
 
             //specify DataSource for kevinTBBindingSource
             kevinTBBindingSource.DataSource = dbContext.KevinTBs.Local;
-            kevinTBBindingSource.MoveFirst(); // go to first result     
+            kevinTBBindingSource.MoveFirst(); // go to first result    
+            searchTextBox.Clear();
         }
 
         private void kevinTBBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -90,6 +91,14 @@ namespace KevinMaM17_Lab3_Ex1
             // don't allow add/delete when contacts are filtered
             bindingNavigatorAddNewItem.Enabled = false;
             bindingNavigatorDeleteItem.Enabled = false;
+        }
+
+        private void browseAllEntriesButton_Click(object sender, EventArgs e)
+        {
+            // allow add/delete when contacts are not filtered
+            bindingNavigatorAddNewItem.Enabled = true;
+            bindingNavigatorDeleteItem.Enabled = true;
+            this._refreshContacts(); // change back to initial unfiltered data
         }
     }
 }

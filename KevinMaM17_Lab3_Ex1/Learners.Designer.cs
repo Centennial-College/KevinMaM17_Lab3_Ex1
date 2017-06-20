@@ -346,6 +346,7 @@
             this.browseAllEntriesButton.TabIndex = 9;
             this.browseAllEntriesButton.Text = "Browse All Entries";
             this.browseAllEntriesButton.UseVisualStyleBackColor = true;
+            this.browseAllEntriesButton.Click += new System.EventHandler(this.browseAllEntriesButton_Click);
             // 
             // kevinTBBindingSource
             // 
