@@ -88,7 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="KevinDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="KevinDBModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -101,7 +101,7 @@
       <LastGenOutput>KevinDBModel.cs</LastGenOutput>
     </Content>
     <Content Include="KevinDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>KevinDB.mdf</DependentUpon>
     </Content>
   </ItemGroup>

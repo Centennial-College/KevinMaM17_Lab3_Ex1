@@ -200,6 +200,7 @@
             this.kevinTBBindingNavigatorSaveItem.Name = "kevinTBBindingNavigatorSaveItem";
             this.kevinTBBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.kevinTBBindingNavigatorSaveItem.Text = "Save Data";
+            this.kevinTBBindingNavigatorSaveItem.Click += new System.EventHandler(this.kevinTBBindingNavigatorSaveItem_Click);
             // 
             // enrolledProgramLabel
             // 
@@ -372,6 +373,7 @@
             this.Name = "Learners";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Learners Directory";
+            this.Load += new System.EventHandler(this.Learners_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kevinTBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kevinTBBindingNavigator)).EndInit();
             this.kevinTBBindingNavigator.ResumeLayout(false);
