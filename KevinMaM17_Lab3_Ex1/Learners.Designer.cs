@@ -36,7 +36,6 @@
             System.Windows.Forms.Label learnerNameLabel;
             System.Windows.Forms.Label numberOfLanguagesLabel;
             System.Windows.Forms.Label strongestSkillLabel;
-            this.kevinTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kevinTBBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -61,21 +60,18 @@
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.browseAllEntriesButton = new System.Windows.Forms.Button();
+            this.kevinTBBindingSource = new System.Windows.Forms.BindingSource(this.components);
             enrolledProgramLabel = new System.Windows.Forms.Label();
             favoriteSubjectLabel = new System.Windows.Forms.Label();
             learnerIDLabel = new System.Windows.Forms.Label();
             learnerNameLabel = new System.Windows.Forms.Label();
             numberOfLanguagesLabel = new System.Windows.Forms.Label();
             strongestSkillLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.kevinTBBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kevinTBBindingNavigator)).BeginInit();
             this.kevinTBBindingNavigator.SuspendLayout();
             this.searchGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kevinTBBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // kevinTBBindingSource
-            // 
-            this.kevinTBBindingSource.DataSource = typeof(KevinDBModel.KevinTB);
             // 
             // kevinTBBindingNavigator
             // 
@@ -217,7 +213,7 @@
             this.enrolledProgramTextBox.Location = new System.Drawing.Point(133, 87);
             this.enrolledProgramTextBox.Name = "enrolledProgramTextBox";
             this.enrolledProgramTextBox.Size = new System.Drawing.Size(155, 20);
-            this.enrolledProgramTextBox.TabIndex = 2;
+            this.enrolledProgramTextBox.TabIndex = 3;
             // 
             // favoriteSubjectLabel
             // 
@@ -251,7 +247,7 @@
             this.learnerIDTextBox.Location = new System.Drawing.Point(133, 33);
             this.learnerIDTextBox.Name = "learnerIDTextBox";
             this.learnerIDTextBox.Size = new System.Drawing.Size(155, 20);
-            this.learnerIDTextBox.TabIndex = 6;
+            this.learnerIDTextBox.TabIndex = 1;
             // 
             // learnerNameLabel
             // 
@@ -268,7 +264,7 @@
             this.learnerNameTextBox.Location = new System.Drawing.Point(133, 60);
             this.learnerNameTextBox.Name = "learnerNameTextBox";
             this.learnerNameTextBox.Size = new System.Drawing.Size(155, 20);
-            this.learnerNameTextBox.TabIndex = 8;
+            this.learnerNameTextBox.TabIndex = 2;
             // 
             // numberOfLanguagesLabel
             // 
@@ -285,7 +281,7 @@
             this.numberOfLanguagesTextBox.Location = new System.Drawing.Point(133, 141);
             this.numberOfLanguagesTextBox.Name = "numberOfLanguagesTextBox";
             this.numberOfLanguagesTextBox.Size = new System.Drawing.Size(155, 20);
-            this.numberOfLanguagesTextBox.TabIndex = 10;
+            this.numberOfLanguagesTextBox.TabIndex = 5;
             // 
             // strongestSkillLabel
             // 
@@ -302,7 +298,7 @@
             this.strongestSkillTextBox.Location = new System.Drawing.Point(133, 168);
             this.strongestSkillTextBox.Name = "strongestSkillTextBox";
             this.strongestSkillTextBox.Size = new System.Drawing.Size(155, 20);
-            this.strongestSkillTextBox.TabIndex = 12;
+            this.strongestSkillTextBox.TabIndex = 6;
             // 
             // searchGroupBox
             // 
@@ -330,14 +326,14 @@
             this.searchTextBox.Location = new System.Drawing.Point(72, 19);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(122, 20);
-            this.searchTextBox.TabIndex = 15;
+            this.searchTextBox.TabIndex = 7;
             // 
             // searchButton
             // 
             this.searchButton.Location = new System.Drawing.Point(200, 16);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(67, 23);
-            this.searchButton.TabIndex = 14;
+            this.searchButton.TabIndex = 8;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
             // 
@@ -346,9 +342,13 @@
             this.browseAllEntriesButton.Location = new System.Drawing.Point(12, 259);
             this.browseAllEntriesButton.Name = "browseAllEntriesButton";
             this.browseAllEntriesButton.Size = new System.Drawing.Size(276, 23);
-            this.browseAllEntriesButton.TabIndex = 14;
+            this.browseAllEntriesButton.TabIndex = 9;
             this.browseAllEntriesButton.Text = "Browse All Entries";
             this.browseAllEntriesButton.UseVisualStyleBackColor = true;
+            // 
+            // kevinTBBindingSource
+            // 
+            this.kevinTBBindingSource.DataSource = typeof(KevinDBModel.KevinTB);
             // 
             // Learners
             // 
@@ -374,12 +374,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Learners Directory";
             this.Load += new System.EventHandler(this.Learners_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.kevinTBBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kevinTBBindingNavigator)).EndInit();
             this.kevinTBBindingNavigator.ResumeLayout(false);
             this.kevinTBBindingNavigator.PerformLayout();
             this.searchGroupBox.ResumeLayout(false);
             this.searchGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kevinTBBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
