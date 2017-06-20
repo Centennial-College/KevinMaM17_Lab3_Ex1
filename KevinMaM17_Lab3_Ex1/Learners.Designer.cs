@@ -99,7 +99,7 @@
             this.kevinTBBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.kevinTBBindingNavigator.Name = "kevinTBBindingNavigator";
             this.kevinTBBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.kevinTBBindingNavigator.Size = new System.Drawing.Size(300, 25);
+            this.kevinTBBindingNavigator.Size = new System.Drawing.Size(317, 25);
             this.kevinTBBindingNavigator.TabIndex = 0;
             this.kevinTBBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -212,7 +212,7 @@
             this.enrolledProgramTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kevinTBBindingSource, "enrolledProgram", true));
             this.enrolledProgramTextBox.Location = new System.Drawing.Point(133, 87);
             this.enrolledProgramTextBox.Name = "enrolledProgramTextBox";
-            this.enrolledProgramTextBox.Size = new System.Drawing.Size(155, 20);
+            this.enrolledProgramTextBox.Size = new System.Drawing.Size(172, 20);
             this.enrolledProgramTextBox.TabIndex = 3;
             // 
             // favoriteSubjectLabel
@@ -229,7 +229,7 @@
             this.favoriteSubjectTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kevinTBBindingSource, "favoriteSubject", true));
             this.favoriteSubjectTextBox.Location = new System.Drawing.Point(133, 114);
             this.favoriteSubjectTextBox.Name = "favoriteSubjectTextBox";
-            this.favoriteSubjectTextBox.Size = new System.Drawing.Size(155, 20);
+            this.favoriteSubjectTextBox.Size = new System.Drawing.Size(172, 20);
             this.favoriteSubjectTextBox.TabIndex = 4;
             // 
             // learnerIDLabel
@@ -246,7 +246,7 @@
             this.learnerIDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kevinTBBindingSource, "learnerID", true));
             this.learnerIDTextBox.Location = new System.Drawing.Point(133, 33);
             this.learnerIDTextBox.Name = "learnerIDTextBox";
-            this.learnerIDTextBox.Size = new System.Drawing.Size(155, 20);
+            this.learnerIDTextBox.Size = new System.Drawing.Size(172, 20);
             this.learnerIDTextBox.TabIndex = 1;
             // 
             // learnerNameLabel
@@ -263,7 +263,7 @@
             this.learnerNameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kevinTBBindingSource, "learnerName", true));
             this.learnerNameTextBox.Location = new System.Drawing.Point(133, 60);
             this.learnerNameTextBox.Name = "learnerNameTextBox";
-            this.learnerNameTextBox.Size = new System.Drawing.Size(155, 20);
+            this.learnerNameTextBox.Size = new System.Drawing.Size(172, 20);
             this.learnerNameTextBox.TabIndex = 2;
             // 
             // numberOfLanguagesLabel
@@ -280,7 +280,7 @@
             this.numberOfLanguagesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kevinTBBindingSource, "numberOfLanguages", true));
             this.numberOfLanguagesTextBox.Location = new System.Drawing.Point(133, 141);
             this.numberOfLanguagesTextBox.Name = "numberOfLanguagesTextBox";
-            this.numberOfLanguagesTextBox.Size = new System.Drawing.Size(155, 20);
+            this.numberOfLanguagesTextBox.Size = new System.Drawing.Size(172, 20);
             this.numberOfLanguagesTextBox.TabIndex = 5;
             // 
             // strongestSkillLabel
@@ -297,7 +297,7 @@
             this.strongestSkillTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kevinTBBindingSource, "strongestSkill", true));
             this.strongestSkillTextBox.Location = new System.Drawing.Point(133, 168);
             this.strongestSkillTextBox.Name = "strongestSkillTextBox";
-            this.strongestSkillTextBox.Size = new System.Drawing.Size(155, 20);
+            this.strongestSkillTextBox.Size = new System.Drawing.Size(172, 20);
             this.strongestSkillTextBox.TabIndex = 6;
             // 
             // searchGroupBox
@@ -307,7 +307,7 @@
             this.searchGroupBox.Controls.Add(this.searchLabel);
             this.searchGroupBox.Location = new System.Drawing.Point(15, 201);
             this.searchGroupBox.Name = "searchGroupBox";
-            this.searchGroupBox.Size = new System.Drawing.Size(273, 52);
+            this.searchGroupBox.Size = new System.Drawing.Size(290, 52);
             this.searchGroupBox.TabIndex = 13;
             this.searchGroupBox.TabStop = false;
             this.searchGroupBox.Text = "Find an entry by learner id";
@@ -317,31 +317,32 @@
             this.searchLabel.AutoSize = true;
             this.searchLabel.Location = new System.Drawing.Point(6, 22);
             this.searchLabel.Name = "searchLabel";
-            this.searchLabel.Size = new System.Drawing.Size(60, 13);
+            this.searchLabel.Size = new System.Drawing.Size(90, 13);
             this.searchLabel.TabIndex = 14;
-            this.searchLabel.Text = "Learner ID:";
+            this.searchLabel.Text = "Enrolled Program:";
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(72, 19);
+            this.searchTextBox.Location = new System.Drawing.Point(102, 18);
             this.searchTextBox.Name = "searchTextBox";
             this.searchTextBox.Size = new System.Drawing.Size(122, 20);
             this.searchTextBox.TabIndex = 7;
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(200, 16);
+            this.searchButton.Location = new System.Drawing.Point(230, 16);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(67, 23);
+            this.searchButton.Size = new System.Drawing.Size(51, 23);
             this.searchButton.TabIndex = 8;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // browseAllEntriesButton
             // 
             this.browseAllEntriesButton.Location = new System.Drawing.Point(12, 259);
             this.browseAllEntriesButton.Name = "browseAllEntriesButton";
-            this.browseAllEntriesButton.Size = new System.Drawing.Size(276, 23);
+            this.browseAllEntriesButton.Size = new System.Drawing.Size(293, 23);
             this.browseAllEntriesButton.TabIndex = 9;
             this.browseAllEntriesButton.Text = "Browse All Entries";
             this.browseAllEntriesButton.UseVisualStyleBackColor = true;
@@ -354,7 +355,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 294);
+            this.ClientSize = new System.Drawing.Size(317, 294);
             this.Controls.Add(this.browseAllEntriesButton);
             this.Controls.Add(this.searchGroupBox);
             this.Controls.Add(enrolledProgramLabel);

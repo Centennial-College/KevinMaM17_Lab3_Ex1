@@ -73,5 +73,23 @@ namespace KevinMaM17_Lab3_Ex1
 
             this._refreshContacts();
         }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            // use LINQ to filter learners with enrolled program as specified
+            var searchLearnerQuery =
+               from learner in dbContext.KevinTBs
+               where learner.enrolledProgram.Equals(searchTextBox.Text)
+               orderby learner.learnerID
+               select learner;
+
+            // display matching contacts
+            kevinTBBindingSource.DataSource = searchLearnerQuery.ToList();
+            kevinTBBindingSource.MoveFirst(); // go to first result  
+
+            // don't allow add/delete when contacts are filtered
+            bindingNavigatorAddNewItem.Enabled = false;
+            bindingNavigatorDeleteItem.Enabled = false;
+        }
     }
 }
